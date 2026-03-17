@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supercar Flip Cards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 class="page-title">Supercar <span>Specs</span></h1>
+
+  <div class="wrapper">
+
+    <!-- CARD 1 — FERRARI -->
+    <div class="card">
+      <input type="checkbox" id="card1" class="more" aria-hidden="true" />
+      <div class="content">
+
+        <div class="front"
+          style="background-image: url('https://images.unsplash.com/photo-1592198084033-aade902d1aae?auto=format&fit=crop&w=800&q=80')">
+          <div class="inner">
+            <div class="badge">Italy &middot; 2020</div>
+            <h2>Ferrari<br />F8 TRIBUTO</h2>
+            <p class="tagline">The pinnacle of Maranello</p>
+            <label for="card1" class="button" aria-hidden="true">View Specs</label>
+          </div>
+        </div>
+
+        <div class="back">
+          <div class="inner">
+            <div class="back-brand ferrari-brand">Ferrari &middot; F8 tributo</div>
+            <div class="stats">
+              <div class="stat">
+                <span class="stat__value">1,000</span>
+                <span class="stat__label">horsepower</span>
+              </div>
+              <div class="stat">
+                <span class="stat__value">2.5s</span>
+                <span class="stat__label">0&ndash;100 km/h</span>
+              </div>
+              <div class="stat">
+                <span class="stat__value">340</span>
+                <span class="stat__label">top km/h</span>
+              </div>
+            </div>
+            <table class="spec-table">
+              <tr>
+                <td class="spec-table__label">Engine</td>
+                <td class="spec-table__value">3.9L V8 Turbo + 3 e-motors</td>
+              </tr>
+              <tr>
+                <td class="spec-table__label">Drivetrain</td>
+                <td class="spec-table__value">Hybrid AWD</td>
+              </tr>
+              <tr>
+                <td class="spec-table__label">Torque</td>
+                <td class="spec-table__value">800 Nm</td>
+              </tr>
+              <tr>
+                <td class="spec-table__label">Kerb weight</td>
+                <td class="spec-table__value">1,570 kg</td>
+              </tr>
+              <tr>
+                <td class="spec-table__label">Gearbox</td>
+                <td class="spec-table__value">8-speed dual-clutch</td>
+              </tr>
+            </table>
+            <label for="card1" class="button return" aria-hidden="true">&#8592; Back</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CARD 2 — PORSCHE -->
+    <div class="card">
+      <input type="checkbox" id="card2" class="more" aria-hidden="true" />
+      <div class="content">
+
+        <div class="front"
+          style="background-image: url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80')">
+          <div class="inner">
+            <div class="badge">Germany &middot; 2022</div>
+            <h2>Porsche<br />911 TURBO</h2>
+            <p class="tagline">Motorsport bred, road legal</p>
+            <label for="card2" class="button" aria-hidden="true">View Specs</label>
+          </div>
+        </div>
+
+        <div class="back">
+          <div class="inner">
+            <div class="back-brand porsche-brand">Porsche &middot; 911 TURBO</div>
+            <div class="stats">
+              <div class="stat">
+                <span class="stat__value">525</span>
+                <span class="stat__label">horsepower</span>
+              </div>
+              <div class="stat">
+                <span class="stat__value">3.2s</span>
+                <span class="stat__label">0&ndash;100 km/h</span>
+              </div>
+              <div class="stat">
+                <span class="stat__value">296</span>
+                <span class="stat__label">top km/h</span>
+              </div>
+            </div>
+            <table class="spec-table">
+              <tr>
+                <td class="spec-table__label">Engine</td>
+                <td class="spec-table__value">4.0L Flat-6 Nat. Aspirated</td>
+              </tr>
+              <tr>
+                <td class="spec-table__label">Drivetrain</td>
+                <td class="spec-table__value">RWD</td>
+              </tr>
+              <tr>
+                <td class="spec-table__label">Torque</td>
+                <td class="spec-table__value">465 Nm</td>
+              </tr>
+              <tr>
+                <td class="spec-table__label">Kerb weight</td>
+                <td class="spec-table__value">1,450 kg</td>
+              </tr>
+              <tr>
+                <td class="spec-table__label">Gearbox</td>
+                <td class="spec-table__value">7-speed PDK</td>
+              </tr>
+            </table>
+            <label for="card2" class="button return" aria-hidden="true">&#8592; Back</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CARD 3 — McLAREN -->
+    <div class="card">
+      <input type="checkbox" id="card3" class="more" aria-hidden="true" />
+      <div class="content">
+
+        <div class="front"
+          style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80')">
+          <div class="inner">
+            <div class="badge">England &middot; 2023</div>
+            <h2>McLaren<br />750S Spider</h2>
+            <p class="tagline">Relentless by design</p>
+            <label for="card3" class="button" aria-hidden="true">View Specs</label>
+          </div>
+        </div>
+
+        <div class="back">
+          <div class="inner">
+            <div class="back-brand mclaren-brand">McLaren &middot; 750S Spider</div>
+            <div class="stats">
+              <div class="stat">
+                <span class="stat__value">750</span>
+                <span class="stat__label">horsepower</span>
+              </div>
+              <div class="stat">
+                <span class="stat__value">2.8s</span>
+                <span class="stat__label">0&ndash;100 km/h</span>
+              </div>
+              <div class="stat">
+                <span class="stat__value">332</span>
+                <span class="stat__label">top km/h</span>
+              </div>
+            </div>
+            <table class="spec-table">
+              <tr>
+                <td class="spec-table__label">Engine</td>
+                <td class="spec-table__value">4.0L V8 Twin-Turbo</td>
+              </tr>
+              <tr>
+                <td class="spec-table__label">Drivetrain</td>
+                <td class="spec-table__value">RWD</td>
+              </tr>
+              <tr>
+                <td class="spec-table__label">Torque</td>
+                <td class="spec-table__value">800 Nm</td>
+              </tr>
+              <tr>
+                <td class="spec-table__label">Kerb weight</td>
+                <td class="spec-table__value">1,389 kg</td>
+              </tr>
+              <tr>
+                <td class="spec-table__label">Gearbox</td>
+                <td class="spec-table__value">7-speed SSG</td>
+              </tr>
+            </table>
+            <label for="card3" class="button return" aria-hidden="true">&#8592; Back</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
