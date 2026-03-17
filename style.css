@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 16px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #111111;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.page-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 0 0 48px;
+  text-align: center;
+}
+
+.page-title span {
+  color: #666666;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+.card {
+  width: 360px;
+  height: 480px;
+  perspective: 1500px;
+}
+
+.card .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+}
+
+.more {
+  display: none;
+}
+
+.more:checked ~ .content {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.front .inner,
+.back .inner {
+  height: 100%;
+  display: grid;
+  padding: 1.5em;
+  transform: translateZ(80px) scale(0.94);
+}
+
+.front {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.front::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 8px;
+  backface-visibility: hidden;
+}
+
+.front .inner {
+  position: relative;
+  z-index: 1;
+  grid-template-rows: 1fr auto auto auto;
+  gap: 6px;
+  align-items: end;
+}
+
+.badge {
+  align-self: start;
+  justify-self: start;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 3px;
+  padding: 4px 10px;
+}
+
+.front h2 {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+.tagline {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0 0 6px;
+}
+
+.card:nth-child(1) .front::after {
+  background: linear-gradient(
+    155deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(204, 0, 0, 0.55) 55%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+}
+
+.card:nth-child(2) .front::after {
+  background: linear-gradient(
+    155deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(100, 100, 100, 0.50) 50%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+}
+
+.card:nth-child(3) .front::after {
+  background: linear-gradient(
+    155deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(255, 96, 0, 0.55) 55%,
+    rgba(0, 0, 0, 0.90) 100%
+  );
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #0f0f0f;
+  border: 1px solid #1a1a1a;
+}
+
+.back .inner {
+  grid-template-rows: auto auto 1fr auto;
+  gap: 0;
+}
+
+.back-brand {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid;
+}
+
+.ferrari-brand {
+  color: #cc0000;
+  border-color: rgba(204, 0, 0, 0.25);
+}
+
+.porsche-brand {
+  color: #c9aa71;
+  border-color: rgba(201, 170, 113, 0.25);
+}
+
+.mclaren-brand {
+  color: #ff6000;
+  border-color: rgba(255, 96, 0, 0.25);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  flex: 1;
+}
+
+.stat:not(:last-child) {
+  border-right: 1px solid #1e1e1e;
+}
+
+.stat__value {
+  font-size: 20px;
+  font-weight: 900;
+  color: #e8e4dc;
+  line-height: 1;
+}
+
+.stat__label {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #555555;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  align-self: start;
+}
+
+.spec-table tr {
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.spec-table tr:last-child {
+  border-bottom: none;
+}
+
+.spec-table__label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #555555;
+  padding: 9px 0;
+  width: 40%;
+}
+
+.spec-table__value {
+  font-size: 11px;
+  font-weight: 600;
+  color: #e8e4dc;
+  text-align: right;
+  padding: 9px 0;
+}
+
+.button {
+  grid-row: -1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  cursor: pointer;
+  display: block;
+  padding: 0 1.5em;
+  height: 3em;
+  line-height: 2.9em;
+  min-width: 3em;
+  background-color: transparent;
+  border: solid 2px #ffffff;
+  color: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  backface-visibility: hidden;
+  transition: 0.3s ease-in-out;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+  background-color: #ffffff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
+  color: #111111;
+}
+
+.button.return {
+  line-height: 3em;
+  justify-self: center;
+  background-color: transparent;
+  border-color: #1e1e1e;
+  color: #555555;
+  text-shadow: none;
+  margin-top: 14px;
+}
+
+.button.return:hover {
+  background-color: #1e1e1e;
+  color: #e8e4dc;
+  box-shadow: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666666;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888888;
+}
